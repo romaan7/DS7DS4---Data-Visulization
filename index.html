@@ -110,22 +110,11 @@ document.getElementById('myForm').onsubmit = function () {
   return false;
 };
    
-   function getQueryParams(qs) {
-    qs = qs.split('+').join(' ');
-
-    var params = {},
-        tokens,
-        re = /[?&]?([^=]+)=([^&]*)/g;
-
-    while (tokens = re.exec(qs)) {
-        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
-    }
-
-    return params;
-}
-   alert(document.location.search);
-var query = getQueryParams(document.location.search);
-alert(query);
+var url_string = "http://www.example.com/t.html?a=1&b=3&c=m2-m3-m4-m5"; //window.location.href
+var url = new URL(url_string);
+var c = url.searchParams.get("c");
+alert(c);
+   
 </script>
       <!-- General libraries -->
       <script src="js/library/jquery.min.js"></script>
