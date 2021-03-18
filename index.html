@@ -97,25 +97,18 @@ As we can see Civilians /Protestors were targeted at the higest at 27%, followe 
                    </div>
 <!-- MAP CHART END-->
 
-<form id="myForm">
-  <input type="text" name="color" value="red"><br>
-  <input type="submit" value="Submit">
-</form> 
+
 <script>
-document.getElementById('myForm').onsubmit = function () {
-  // set params using form values
-  window.location.search = this.color.name + '=' + this.color.value;
   
-  // prevents normal form submission
-  return false;
-};
-   
 var url_string = window.location.href
 var url = new URL(url_string);
-var c = url.searchParams.get("color");
-alert(c);
-   
+var c = url.searchParams.get("invite-code");
+alert("You are invited Mr."+c); 
+ document.write("<h1>You are invited Mr."+c+"</h1>");
 </script>
+      
+     
+      
       <!-- General libraries -->
       <script src="js/library/jquery.min.js"></script>
       <script src="js/library/queue.min.js"></script>
