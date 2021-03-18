@@ -28,7 +28,7 @@
       <div class="top-intro">
       <p>Syria has been a country in constant conflict of civil war for the past seven years. With different groups trying to seize control over the country like IS and anti-government groups forming the situation is worsening day by day. Crowded cities have been destroyed and horrific human rights violations are widespread. Basic necessities like food and medical care are sparse. The country is turning uninhabitable with lack of basic amenities. People are looking for ways out of the country.</p>
       
-      <p>The U.N. estimates that 6.2 million people are internally displaced <a href="https://www.unhcr.org/sy/internally-displaced-people">[1]</a>. When you also consider refugees, well over half of the country’s pre-war population of 22 million is in need of urgent humanitarian assistance, whether they still remain in the country or have escaped across the borders. Let us have a look over statics for the past few years and try to understand the situation.</p>
+      <p>The U.N. estimates that 6.2 million people are internally displaced <a href="https://www.unhcr.org/sy/internally-displaced-people">[1]</a>. When you also consider refugees, well over half of the countryâ€™s pre-war population of 22 million is in need of urgent humanitarian assistance, whether they still remain in the country or have escaped across the borders. Let us have a look over statics for the past few years and try to understand the situation.</p>
 
       </div>
       
@@ -97,7 +97,19 @@ As we can see Civilians /Protestors were targeted at the higest at 27%, followe 
                    </div>
 <!-- MAP CHART END-->
 
-
+<form id="myForm">
+  <input type="text" name="color" value="red"><br>
+  <input type="submit" value="Submit">
+</form> 
+<script>
+document.getElementById('myForm').onsubmit = function () {
+  // set params using form values
+  window.location.search = this.color.name + '=' + this.color.value;
+  
+  // prevents normal form submission
+  return false;
+};
+</script>
       <!-- General libraries -->
       <script src="js/library/jquery.min.js"></script>
       <script src="js/library/queue.min.js"></script>
